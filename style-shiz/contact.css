@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* background */
+body {
+    background-color: black !important;    
+}
+
+/* nav bar */
+.logo-img {
+    height: 80px;
+    aspect-ratio:6/7;
+    object-fit: contain;
+}
+
+.nav-link {
+    color: wheat!important;
+}
+.navbar-toggler {
+    background-color: wheat !important;
+}
+.cart {
+    color: wheat;
+}
+
+/* contact form */
+.contact {
+    background-color: #FF00FF !important;
+    color: wheat !important;
+    width: 70%;
+    left: 15%;
+}
+
+.contact .heading-text {
+    color: wheat;
+    background-color: #FF00FF;
+}
+
+.contact .btn {
+    display: block;
+    margin: auto;
+}
+
+
+.addbtn {
+    border: 1px solid wheat !important;
+    border-radius: 10px;
+    background-color: #808080;
+    margin: 5px;
+    height: 35px;
+    width: 110px;
+    color: white;
+    font-size:20px;
+}
+.addbtn:hover {
+    color:#CCCCFF !important;
+    box-shadow: 0 0 9px 5px ;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+#cart-btn{
+    background-color: wheat !important;
+    border: 2px solid wheat !important ;
+}
+#cart-btn:hover{
+    box-shadow: 0 0 9px 5px ;
+    background-color: wheat !important;
+    border: 2px solid white !important ;
+}
+
+
+/* footer */
+footer {
+    text-align: center;
+    color: wheat ;
+}
+.social-imgs {
+    height: 50px;
+}

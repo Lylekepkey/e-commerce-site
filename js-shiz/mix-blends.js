@@ -1,47 +1,25 @@
 const products = [
     {
         id: 1,
-        Image: , //ddd
-        name: "Air Pods Max", //change names
-        price: "1000",
+        Image: "https://i.postimg.cc/rp3dyfbh/4070024.png",
+        name: "Hot Chocolate", //change names
+        price: "90",
         quantity: 5,
     },
     {
         id: 2,
-        Image: , //add
-        name: "Beats by Dr Dre",
-        price: "600",
+        Image: "https://i.postimg.cc/yxV779VQ/4070025.png",
+        name: "Espresso Beans",
+        price: "180",
         quantity: 5,
     },
     {
         id: 3,
-        Image:  ,//aad
-        name: `MacBook Pro`,
-        price: `1200`,
-        quantity: 5,
-    },
-    {
-        id: 4,
-        Image: , //adddd
-        name: `MacBook Air`,
-        price: `700`,
-        quantity: 5,
-    },
-    {
-        id: 5,
-        Image: , //adddd
-        name: `iPhone 11`,
-        price: `500`,
-        quantity: 5,
-    },
-    {
-        id: 6,
-        Image: , //addd
-        name: `iPhone 11 Pro`,
-        price: `800`,
+        Image:  "https://i.postimg.cc/YSKKpgR6/4500094-jpg.jpg",
+        name: "Coffee beans",
+        price: "120",
         quantity: 5,
     }
-
 ];
 
 function displayProducts() {
@@ -82,10 +60,8 @@ function updateCart() {
         const cartItem = document.createElement("div");
         cartItem.innerHTML = `
         <span>${product.name}</span>
-        <span>${product.price}</span>
-        <input type="number" placeholder="1" min="1" width="50px" height="40px">
-        <p>Total $ ${product.price}</p>
-        <button onclick="removeFromCart(${index})" class="rembutton">✖</button>
+        <p>Total R ${product.price}
+        <button onclick="removeFromCart(${index})" class="rembutton">✖</button></p>
         `;
         cartContainer.appendChild(cartItem);
 });
@@ -98,7 +74,7 @@ function calculateTotal() {
     cart.forEach(item => {
         total +=  eval(item.price)
     })
-    totalElement.textContent = `$${total}`;
+    totalElement.textContent = `R${total}`;
 }
 
 function checkout() {
@@ -110,7 +86,8 @@ function checkout() {
     const modalFooter = document.querySelector(".modal-footer");
     modalFooter.innerHTML = `
         <div class="tick-animation" >
-        <img src="https://i.postimg.cc/wxhvCdcV/green-tick-checkbox-illustration-isolated-on-white-background-free-vector.jpg" alt="Tick" style="width: 400px;">
+        <img src="https://i.postimg.cc/wxhvCdcV/green-tick-checkbox-illustration-isolated-on-white-background-free-vector.jpg"
+        alt="Tick" style="width: 400px;">
         <p>Checkout successful!</p>
         </div>
     `;

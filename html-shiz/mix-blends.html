@@ -45,18 +45,18 @@
             
         </nav>
     </header>
-      <div class="modal" id="myModal">
+    <div class="modal" id="myModal">
         <div class="modal-dialog">
-          <div class="modal-content">
-              <div class="modal-header">
-                  <h4 class="modal-title">Added Items</h4>
+          <div class="modal-content bg-black">
+              <div class="modal-header" style="color: wheat;">
+                  <h4 class="modal-title">Items in cart</h4>
                   <button type="button"  class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
-                <div id="cart-body">
+                <div id="cart-body" style="color: wheat; text-align: center;">
                     <div id="results"><h5>Total</h5></div>
                     
                 </div>
-                <div class="modal-footer">            
+                <div class="modal-footer" style="color:wheat;">            
                     <p>Total: <span id="total"></span></p>
                     <button onclick="checkout()" class="btn btn-primary">Checkout</button>              
             </div>
@@ -64,22 +64,24 @@
         </div>
       </div>
 
-    <main>
+      <main>
+        <button onclick="sortProductsByPrice()" class="btn btn-primary" id="sort-btn">Sort by Price</button>
+      
+       
         <div class="p-3" id="products">
 
         </div>
         <div id="cart-container">
-            <button onclick="sortProductsByPrice()" class="btn btn-primary">Sort by Price</button>
             <div id="cart-body"></div>
         </div>
     </main>
 
     <footer>
-        <p>© Made By Team Meezaan, AKA The Angry Nerds, 2023 🍔</p>
+        <p>L.K&copy</p>
         <div class="socials">
-            <img src="https://i.postimg.cc/LXPqcmGH/icons8-instagram-150-3.png" alt="Instagram" class="social-imgs">
-            <img src="https://i.postimg.cc/43BwYQ3K/icons8-twitter-150-2.png" alt="Twitter" class="social-imgs">
-            <img src="https://i.postimg.cc/8Pf6WBZF/icons8-facebook-150-1.png" alt="Facebook" class="social-imgs">
+            <a href="#"><img src="https://i.postimg.cc/LXPqcmGH/icons8-instagram-150-3.png" alt="Instagram" class="social-imgs"></a>
+            <a href="#"><img src="https://i.postimg.cc/43BwYQ3K/icons8-twitter-150-2.png" alt="Twitter" class="social-imgs"></a>
+            <a href="#"><img src="https://i.postimg.cc/8Pf6WBZF/icons8-facebook-150-1.png" alt="Facebook" class="social-imgs"></a>
         </div>
     </footer>
 
