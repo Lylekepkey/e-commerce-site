@@ -87,7 +87,8 @@ function checkout() {
     const modalFooter = document.querySelector(".modal-footer");
     modalFooter.innerHTML = `
         <div class="tick-animation" >
-        <img src="https://i.postimg.cc/wxhvCdcV/green-tick-checkbox-illustration-isolated-on-white-background-free-vector.jpg" alt="Tick" style="width: 400px;">
+        <img src="https://i.postimg.cc/wxhvCdcV/green-tick-checkbox-illustration-isolated-on-white-background-free-vector.jpg"
+        alt="Tick" style="width: 400px;">
         <p>Checkout successful!</p>
         </div>
     `;
