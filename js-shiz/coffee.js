@@ -98,77 +98,35 @@ function checkout() {
 
 let isAscending = true;
 
-// function sortProductsByPrice() {
-//     const ourProducts = document.getElementById("products");
-
-    
-//     isAscending = !isAscending;
-    
-//     const sortedProducts = products.sort((a, b) => {
-//         const priceA = parseFloat(a.price);
-//         const priceB = parseFloat(b.price);
-
-//         if (isAscending) {
-//             return priceA - priceB;
-//         } else {
-//             return priceB - priceA; 
-//         }
-//     });
-
-//     ourProducts.innerHTML = "";
-    
-//     sortedProducts.forEach((product) => {
-//         const productElement = document.createElement("div");
-//         productElement.innerHTML = `
-//         <img src="${product.Image}" alt="${product.name}" id="product-imgs">
-//         <h3>${product.name}</h3>
-//         <p>${product.price}</p>        
-//         <button onclick="addToCart(${product.id})" class="addbtn">Add to cart</button>`;
-//         ourProducts.appendChild(productElement);
-//     });
-// } 
-
 function sortProductsByPrice() {
-  if (isAscending) {
-    sortProductsByAscendingPrice();
-  } else {
-    sortProductsByDescendingPrice();
-  }
+    const ourProducts = document.getElementById("products");
 
-  isAscending = !isAscending;
-}
+    
+    isAscending = !isAscending;
+    
+    const sortedProducts = products.sort((a, b) => {
+        const priceA = parseFloat(a.price);
+        const priceB = parseFloat(b.price);
 
-function sortProductsByAscendingPrice() {
-  const ourProducts = document.getElementById("products");
-  const sortedProducts = products.sort((a, b) => parseFloat(a.price) - parseFloat(b.price));
-  ourProducts.innerHTML = "";
-  
-  sortedProducts.forEach((product) => {
-    const productElement = document.createElement("div");
-    productElement.innerHTML = `
-      <img src="${product.Image}" alt="${product.name}" id="product-imgs">
-      <h3>${product.name}</h3>
-      <p>${product.price}</p>        
-      <button onclick="addToCart(${product.id})" class="addbtn">Add to cart</button>`;
-    ourProducts.appendChild(productElement);
-  });
-}
+        if (isAscending) {
+            return priceA - priceB;
+        } else {
+            return priceB - priceA; 
+        }
+    });
 
-function sortProductsByDescendingPrice() {
-  const ourProducts = document.getElementById("products");
-  const sortedProducts = products.sort((a, b) => parseFloat(b.price) - parseFloat(a.price));
-  ourProducts.innerHTML = "";
-  
-  sortedProducts.forEach((product) => {
-    const productElement = document.createElement("div");
-    productElement.innerHTML = `
-      <img src="${product.Image}" alt="${product.name}" id="product-imgs">
-      <h3>${product.name}</h3>
-      <p>${product.price}</p>        
-      <button onclick="addToCart(${product.id})" class="addbtn">Add to cart</button>`;
-    ourProducts.appendChild(productElement);
-  });
-}
+    ourProducts.innerHTML = "";
+    
+    sortedProducts.forEach((product) => {
+        const productElement = document.createElement("div");
+        productElement.innerHTML = `
+        <img src="${product.Image}" alt="${product.name}" id="product-imgs">
+        <h3>${product.name}</h3>
+        <p>${product.price}</p>        
+        <button onclick="addToCart(${product.id})" class="addbtn">Add to cart</button>`;
+        ourProducts.appendChild(productElement);
+    });
+} 
 
 
 
